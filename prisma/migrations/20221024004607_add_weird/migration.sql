@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Weird" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
+    "whyweird" TEXT NOT NULL,
+    CONSTRAINT "Weird_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
